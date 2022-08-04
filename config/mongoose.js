@@ -1,8 +1,8 @@
 // require the library
 const mongoose = require("mongoose");
-
+const env = require("./environment");
 // connect to the database and naming the data base.
-mongoose.connect("mongodb://localhost/IssueTracker");
+mongoose.connect(`${env.DB}`);
 
 // acquire the connection to check if it is successful
 const db = mongoose.connection;

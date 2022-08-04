@@ -1,0 +1,1 @@
+let a=$(".eachLabel");for(let o=0;o<a.length;o++)a[o].style.backgroundColor=`rgb(${Math.floor(200*Math.random())},${Math.floor(200*Math.random())},${Math.floor(200*Math.random())})`,a[o].style.color="white";

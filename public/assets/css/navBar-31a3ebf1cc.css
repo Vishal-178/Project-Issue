@@ -1,0 +1,1 @@
+.navBar{display:flex;justify-content:space-between;border-bottom:1px solid #3498db;padding:10px 50px}.navCreateProject,.navTitle{font-size:larger;font-weight:700;text-decoration:none!important;color:#000}@media only screen and (max-width:550px){.navBar{padding:10px}}
