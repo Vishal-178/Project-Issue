@@ -1,0 +1,150 @@
+.projectDetailContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.detailView {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 3px rgb(166, 229, 254);
+  width: 80vw;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 50px;
+}
+.detailDescription {
+  text-align: center;
+}
+.detailBottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.IssueButton {
+}
+/*  */
+/* .filter {
+} */
+.filterHead {
+  display: flex;
+  margin: 0px 50px;
+  padding: 0px 20px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.filterButtons {
+  display: flex;
+  width: 80vw;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.filterInpusAndButton {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* -- */
+.allIssueContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.allIssue {
+  display: flex;
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0px 10px;
+  margin: 50px;
+  width: 80vw;
+}
+.issueHead {
+  width: 80%;
+  display: flex;
+}
+.issueDescription {
+  width: 80%;
+  display: flex;
+}
+.issueAuthor {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.issueLabel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.lang {
+  border-color: #cccccc;
+  border-style: solid;
+  padding: 6px;
+  font-size: 15px;
+  border-width: 3px;
+  box-shadow: 0px 0px 5px 0px rgb(42 42 42 / 17%);
+  border-radius: 10px;
+  margin: 10px;
+}
+.issueFilterButton {
+  background: #3498db;
+
+  border-radius: 9px;
+  border: 1px solid black;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.issueFilterButton:hover {
+  background: #0e6cab;
+  box-shadow: 0px 0px 2px 1px;
+  text-decoration: none;
+  color: white;
+}
+.issueFilter {
+  border: 1px solid #3498db;
+  border-radius: 10px;
+  padding: 0px 10px;
+  width: 70px;
+}
+.eachLabel {
+  display: flex;
+
+  border-radius: 10px;
+  margin: 10px;
+  padding: 0px 10px;
+}
+@media only screen and (max-width: 500px) {
+  .filterButtons {
+    display: flex;
+    width: 80vw;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

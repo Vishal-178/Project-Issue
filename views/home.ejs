@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/home.css" />
+<div class="homeContainer">
+  <% projects.forEach(project => { %>
+
+  <div class="projectCard">
+    <div class="getDetailHelper">
+      <a class="getDetail" href="/detailpage/?id=<%= project._id %>">
+        <div class="cardTitle">
+          <h4 class="titleLimit heading"><%= project.name %></h4>
+        </div>
+        <div class="cardDescription">
+          <p class="descriptionLimit"><%= project.description %></p>
+        </div>
+      </a>
+      <div class="cardAuthor">
+        <a href="/deleteProject/?id=<%= project._id %>">
+          <i class="fa-solid fa-trash"></i>
+        </a>
+        <a class="getDetail" href="/detailpage/?id=<%= project._id %>">
+          <h5 class="heading"><%= project.author %></h5>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <% }) %>
+</div>
+<script src="/js/home.js"></script>

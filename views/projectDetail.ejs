@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="/css/projectDetail.css" />
+<div class="projectDetailContainer">
+  <div class="detailView">
+    <div>
+      <h3 class="heading"><%= project.name %></h3>
+    </div>
+    <div>
+      <p class="detailDescription"><%= project.description %></p>
+    </div>
+    <div class="detailBottom">
+      <a href="/create-issue/?id=<%=id%>" class="issueFilterButton"
+        >Create Issue</a
+      >
+      <div>
+        <h4 class="heading"><%= project.author %></h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="filter">
+    <div class="filterHead">
+      <div class="issueFilter">
+        <h4>Issues</h4>
+      </div>
+
+      <form action="/filter" method="get">
+        <div class="filterButtons">
+          <input type="text" name="id" value="<%= id %>" hidden />
+          <label for="">Filter</label>
+          <div class="filterInpusAndButton">
+            <select name="filter1" class="lang">
+              <option value="">None</option>
+              <option value="Payment">Payment</option>
+              <option value="Security">Security</option>
+              <option value="Review">Review</option>
+              <option value="Design">Design</option>
+              <option value="Statement">Statement</option>
+              <option value="frontend">frontend</option>
+              <option value="backend">backend</option>
+              <option value="node">node</option>
+              <option value="documentation">documentation</option>
+            </select>
+            <select name="filter2" class="lang">
+              <option value="">None</option>
+              <option value="Bug">Bug</option>
+              <option value="Feature">Feature</option>
+              <option value="cicd">CI/CD</option>
+              <option value="performance">performance</option>
+              <option value="UX">UX</option>
+              <option value="API">API</option>
+              <option value="database">database</option>
+              <option value="email">email</option>
+              <option value="inDev">In Dev</option>
+            </select>
+
+            <input type="submit" value="Submit" class="issueFilterButton" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="allIssueContainer">
+      <% issues.forEach(issue=> { %>
+      <div class="allIssue">
+        <div class="issueHead">
+          <h3 class="heading"><%= issue.name %></h3>
+        </div>
+        <div class="issueDescription">
+          <p class="detailDescription"><%= issue.description %></p>
+        </div>
+        <div class="issueAuthor">
+          <a href="/deleteIssue/?id=<%= issue._id %>&&idd=<%= id %>">
+            <i class="fa-solid fa-trash"></i>
+          </a>
+          <h4 class="heading"><%= issue.author %></h4>
+        </div>
+        <div class="issueLabel">
+          <% issue.label.forEach(element=> { %>
+          <div class="eachLabel">
+            <h4><%= element %></h4>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+<script src="/js/index.js"></script>

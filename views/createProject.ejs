@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/createProject.css" />
+<div class="createContainer">
+  <form action="/createNewProject" method="POST">
+    <table class="createForm">
+      <tr class="createInputs">
+        <td><span class="createTitle">Name</span></td>
+
+        <td>
+          <input type="text" name="name" required class="createInput" />
+        </td>
+      </tr>
+      <tr class="createInputs">
+        <td><span class="createTitle">Description</span></td>
+        <td>
+          <textarea
+            type="text"
+            name="description"
+            required
+            class="createInput"
+            rows="5"
+            spellcheck
+          ></textarea>
+        </td>
+      </tr>
+      <tr class="createInputs">
+        <td><span class="createTitle">Author</span></td>
+
+        <td>
+          <input type="text" name="author" required class="createInput" />
+        </td>
+      </tr>
+    </table>
+    <div class="createSubmit">
+      <input type="submit" value="Create Project" class="createButton" />
+    </div>
+  </form>
+</div>
